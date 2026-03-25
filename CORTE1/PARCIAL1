@@ -1,0 +1,93 @@
+#include <stdio.h>
+
+int main() {
+
+    int codigo, edad;
+    int matriculaActiva, documento, induccion, monitor;
+    float nota1, nota2, nota3, promedio;
+    double valorMatricula;
+    char nombre[50];
+    char inicialApellido;
+
+    printf("BIENVENIDO AL SISTEMA ACADEMICO \n\n");
+
+    printf("Ingrese el codigo del estudiante: ");
+    scanf("%d", &codigo);
+
+    printf("Ingrese el nombre del estudiante: ");
+    scanf("%s", nombre);
+
+    printf("Ingrese la inicial del apellido: ");
+    scanf(" %c", &inicialApellido);
+
+    printf("Ingrese la edad: ");
+    scanf("%d", &edad);
+
+    printf("Ingrese nota 1: ");
+    scanf("%f", &nota1);
+
+    printf("Ingrese nota 2: ");
+    scanf("%f", &nota2);
+
+    printf("Ingrese nota 3: ");
+    scanf("%f", &nota3);
+
+    printf("Ingrese valor de matricula: ");
+    scanf("%lf", &valorMatricula);
+
+    printf("Tiene matricula activa? (1=si, 0=no): ");
+    scanf("%d", &matriculaActiva);
+
+    printf("Presento documento? (1=si, 0=no): ");
+    scanf("%d", &documento);
+
+    printf("Aprobo induccion? (1=si, 0=no): ");
+    scanf("%d", &induccion);
+
+    printf("Es monitor? (1=si, 0=no): ");
+    scanf("%d", &monitor);
+
+    if (nota1 < 0 || nota1 > 5 || nota2 < 0 || nota2 > 5 || nota3 < 0 || nota3 > 5) {
+        printf("\nError: Las notas deben estar entre 0.0 y 5.0\n");
+        return 0;
+    }
+
+    promedio = (nota1 + nota2 + nota3) / 3;
+
+    if (codigo % 2 == 0) {
+        printf("\nEl codigo es PAR\n");
+    } else {
+        printf("\nEl codigo es IMPAR\n");
+    }
+
+    if (promedio < 3.0) {
+        printf("Desempeño: Reprobado\n");
+    } else if (promedio < 4.0) {
+        printf("Desempeño: Aceptable\n");
+    } else if (promedio < 4.5) {
+        printf("Desempeño: Bueno\n");
+    } else {
+        printf("Desempeño: Excelente\n");
+    }
+
+    int acceso = (matriculaActiva == 1 && documento == 1 && (induccion == 1 || monitor == 1));
+
+    printf("Acceso al laboratorio: %s\n", acceso ? "PERMITIDO" : "DENEGADO");
+
+    if (acceso == 1) {
+        if (promedio >= 4.5) {
+            printf("Acceso VIP al laboratorio\n");
+        } else {
+            printf("Acceso normal al laboratorio\n");
+        }
+    }
+
+    printf("\n RESUMEN DEL ESTUDIANTE \n");
+    printf("Codigo: %d\n", codigo);
+    printf("Nombre: %s %c.\n", nombre, inicialApellido);
+    printf("Edad: %d\n", edad);
+    printf("Promedio: %.2f\n", promedio);
+    printf("Valor matricula: %.2lf\n", valorMatricula);
+
+    return 0;
+}
