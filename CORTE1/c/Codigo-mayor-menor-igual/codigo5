@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+   int main () {
+ 
+      int temperature;
+
+      printf("Ingrese un valor de temperatura: ");
+      scanf("%d", &temperature);
+ 
+           if (temperature < 0) {
+             printf("Esta congelando!\n");
+    
+           } else if (temperature < 20) {
+             printf("Esta fresco.\n");
+
+           } else {
+             printf("Esta caluroso.\n");
+           
+           }
+return 0;
+
+}
