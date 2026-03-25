@@ -1,0 +1,28 @@
+#include<stdio.h>
+
+ int main() {
+ int edad;
+ float promedio;
+ char inicial;
+ char nombre[40];
+
+ printf("Ingrese su nombre:");
+ scanf("%s", nombre);
+
+ printf("Ingrese su edad:");
+ scanf("%d", &edad);
+
+ printf("Ingrese su promedio:");
+ scanf("%f", &promedio);
+
+ printf("Ingrese la inicial de su apellido:");
+ scanf(" %c", &inicial);
+
+ printf("\nResumen de datos ingresados:\n");
+ printf("Nombre: %s\n", nombre);
+ printf("Edad: %d\n", edad);
+ printf("Promedio: %.2f\n", promedio);
+ printf("Inicialdelapellido: %c\n", inicial);
+
+ return 0;
+ }
