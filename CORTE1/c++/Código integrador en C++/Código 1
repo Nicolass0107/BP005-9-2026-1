@@ -1,0 +1,41 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string nombre;
+    float nota1, nota2, nota3, promedio;
+
+    cout << "Ingrese el nombre del estudiante: ";
+    getline(cin, nombre);
+
+    cout << "Ingrese la nota 1: ";
+    cin >> nota1;
+
+    cout << "Ingrese la nota 2: ";
+    cin >> nota2;
+
+    cout << "Ingrese la nota 3: ";
+    cin >> nota3;
+
+    if ((nota1 < 0 || nota1 > 5) || (nota2 < 0 || nota2 > 5) || (nota3 < 0 || nota3 > 5)) {
+        cout << "Una o mas notas son invalidas." << endl;
+    } else {
+        promedio = (nota1 + nota2 + nota3) / 3;
+
+        cout << "\nEstudiante: " << nombre << endl;
+        cout << "Promedio: " << promedio << endl;
+
+        if (promedio < 3.0) {
+            cout << "Resultado: Reprobado." << endl;
+        } else if (promedio < 4.0) {
+            cout << "Resultado: Aprobado con desempeno aceptable." << endl;
+        } else if (promedio < 4.5) {
+            cout << "Resultado: Buen desempeno." << endl;
+        } else {
+            cout << "Resultado: Excelente desempeno." << endl;
+        }
+    }
+
+    return 0;
+}
