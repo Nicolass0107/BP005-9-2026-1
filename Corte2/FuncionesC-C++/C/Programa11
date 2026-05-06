@@ -1,0 +1,11 @@
+#include <stdio.h>
+long fact(int n);
+int main() {
+    printf("Factorial de 5: %ld\n", fact(5));
+    return 0;
+}
+long fact(int n) {
+    long r = 1;
+    for(int i=1; i<=n; i++) r *= i;
+    return r;
+}
