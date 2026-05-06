@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+float convertirAFahrenheit(float celsius);
+
+int main() {
+    float c, f;
+    printf("Digite la temperatura en Celsius: ");
+    scanf("%f", &c);
+    
+    f = convertirAFahrenheit(c);
+    
+    printf("Temperatura en Fahrenheit: %.2f\n", f);
+    return 0;
+}
+
+float convertirAFahrenheit(float celsius) {
+    return (celsius * 9 / 5) + 32;
+}
