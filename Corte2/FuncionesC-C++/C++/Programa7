@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int mayor(int v[], int n);
+int main() {
+    int v[] = {10, 50, 20};
+    cout << "Mayor: " << mayor(v, 3) << endl;
+    return 0;
+}
+int mayor(int v[], int n) {
+    int m = v[0];
+    for(int i=1; i<n; i++) if(v[i]>m) m = v[i];
+    return m;
+}
