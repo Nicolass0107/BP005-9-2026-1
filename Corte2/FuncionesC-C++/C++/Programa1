@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+float convertirAFahrenheit(float celsius);
+
+int main() {
+    float c, f;
+    cout << "Digite la temperatura en Celsius: ";
+    cin >> c;
+    
+    f = convertirAFahrenheit(c);
+    
+    cout << "Temperatura en Fahrenheit: " << f << endl;
+    return 0;
+}
+
+float convertirAFahrenheit(float celsius) {
+    return (celsius * 9 / 5) + 32;
+}
