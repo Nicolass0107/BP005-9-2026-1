@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+float promedio(float v[], int n);
+int main() {
+    float n[] = {4.0, 5.0, 3.0};
+    cout << "Promedio: " << promedio(n, 3) << endl;
+    return 0;
+}
+float promedio(float v[], int n) {
+    float s = 0;
+    for(int i=0; i<n; i++) s += v[i];
+    return s/n;
+}
