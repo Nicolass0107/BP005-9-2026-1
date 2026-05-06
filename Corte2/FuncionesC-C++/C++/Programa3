@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+bool esAprobado(float n);
+int main() {
+    float n;
+    cout << "Nota: "; cin >> n;
+    if(esAprobado(n)) cout << "Aprobado" << endl;
+    else cout << "Reprobado" << endl;
+    return 0;
+}
+bool esAprobado(float n) { return n >= 3.0; }
