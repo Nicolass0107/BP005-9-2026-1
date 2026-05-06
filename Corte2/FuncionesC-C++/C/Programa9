@@ -1,0 +1,8 @@
+#include <stdio.h>
+int esPar(int n);
+int main() {
+    int n = 4;
+    if(esPar(n)) printf("Par\n"); else printf("Impar\n");
+    return 0;
+}
+int esPar(int n) { return n % 2 == 0; }
