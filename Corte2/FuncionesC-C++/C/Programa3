@@ -1,0 +1,10 @@
+#include <stdio.h>
+int esAprobado(float n);
+int main() {
+    float n;
+    printf("Nota: "); scanf("%f", &n);
+    if(esAprobado(n)) printf("Aprobado\n");
+    else printf("Reprobado\n");
+    return 0;
+}
+int esAprobado(float n) { return n >= 3.0; }
