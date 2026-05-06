@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+float area(float lado); 
+float area(float b, float h);
+
+int main() {
+    cout << "Area Cuadrado: " << area(4.0) << endl;
+    cout << "Area Rectangulo: " << area(4.0, 5.0) << endl;
+    return 0;
+}
+
+float area(float lado) { return lado * lado; }
+float area(float b, float h) { return b * h; }
