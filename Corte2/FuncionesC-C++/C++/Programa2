@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+float area(float b, float h);
+float peri(float b, float h);
+int main() {
+    float b = 5, h = 3;
+    cout << "Area: " << area(b,h) << ", Perimetro: " << peri(b,h) << endl;
+    return 0;
+}
+float area(float b, float h) { return b * h; }
+float peri(float b, float h) { return 2 * (b + h); }
