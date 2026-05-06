@@ -1,0 +1,12 @@
+#include <stdio.h>
+int mayor(int v[], int n);
+int main() {
+    int v[] = {10, 50, 20};
+    printf("Mayor: %d\n", mayor(v, 3));
+    return 0;
+}
+int mayor(int v[], int n) {
+    int m = v[0];
+    for(int i=1; i<n; i++) if(v[i]>m) m = v[i];
+    return m;
+}
